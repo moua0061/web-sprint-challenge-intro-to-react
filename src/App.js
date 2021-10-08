@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import './App.css';
+import Character from "./components/Character";
 
 
 
@@ -16,23 +17,23 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [starWarsData, setStarsData] = useState([]);
-  const [starWarsInfo, setStarWarsInfo] = useState([]);
+  
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(resp => {
         console.log(resp.data)
-          
-          return setStarsData(resp.data)
+          return setStarsData(resp.data);
       })
       .catch ( err => {
         console.log('your shit ain\'t working!!');
       })
-  })
+  },[])
 
   return (
     <div className="App">
       <h1 className="Header">Star Wars Characters</h1>
+      <Character starWarsData={starWarsData.data}/>
     </div>
   );
 }
