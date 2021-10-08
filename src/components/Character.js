@@ -17,7 +17,9 @@ const Character = props=> {
     return (
         <StyledCharacter>
             <div className='character-container'>
-                <p> TESTING </p>
+                {
+                    props.character.name
+                }
             </div>
         </StyledCharacter>
     )

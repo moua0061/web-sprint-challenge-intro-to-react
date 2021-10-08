@@ -34,9 +34,9 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       {
-        starWarsData.data.map((character) => 
-        <Character starWarsData={character})
-      } 
+        starWarsData.map((character) => 
+        <Character character={character} />)
+      }
     </div>
   );
 }
