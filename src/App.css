@@ -5,7 +5,18 @@
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
   text-align: center;
-  font-size: 10rem;
+  font-size: 10em;
 }
-/* write your parent styles in here for your App.js */
+/* write your parent styles in here for your App.js 
+
+ {
+        starWarsData.data.map((starWarsData) => 
+        <Character starWarsData={starWarsData} />)
+      }
+
+
+
+
+      {props.starWarsData.name}
+*/
 
