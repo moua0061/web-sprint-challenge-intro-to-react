@@ -11,6 +11,7 @@ const StyledCharacter = styled.div`
     background-color: #28282B;
     margin: 10%;
     padding: 2%;
+    text-align: center;
 `;
 
 const Character = props=> {

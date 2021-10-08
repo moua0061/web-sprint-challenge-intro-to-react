@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <h1 className="Header">React Wars > </h1>
       {
         starWarsData.map((character) => 
         <Character character={character} />)
